@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_youtube_api/models/channel_model.dart';
-import 'package:flutter_youtube_api/models/video_model.dart';
-import 'package:flutter_youtube_api/screens/video_screen.dart';
-import 'package:flutter_youtube_api/services/api_service.dart';
+import 'package:googlee_404/models/channel_model.dart';
+import 'package:googlee_404/models/video_model.dart';
+import 'package:googlee_404/screens/video_screen.dart';
+import 'package:googlee_404/services/api_service.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   _initChannel() async {
     Channel channel = await APIService.instance
-        .fetchChannel(channelId: 'UC6Dy0rQ6zDnQuHQ1EeErGUA');
+        .fetchChannel(channelId: 'UCeJpDP0BiYUJ79VJgiahxLQ');
     setState(() {
       _channel = channel;
     });
@@ -139,8 +139,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(),
       appBar: AppBar(
-        title: Text('YouTube Channel'),
+        title: Text('Googlee404'),
+        centerTitle: true,
       ),
       body: _channel != null
           ? NotificationListener<ScrollNotification>(

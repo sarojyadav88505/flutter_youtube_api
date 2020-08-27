@@ -1,7 +1,9 @@
-import 'package:flutter_youtube_api/models/video_model.dart';
+import 'package:googlee_404/models/video_model.dart';
+
+// ignore: duplicate_import
+import 'package:googlee_404/models/video_model.dart';
 
 class Channel {
-
   final String id;
   final String title;
   final String profilePictureUrl;
@@ -30,5 +32,4 @@ class Channel {
       uploadPlaylistId: map['contentDetails']['relatedPlaylists']['uploads'],
     );
   }
-
 }

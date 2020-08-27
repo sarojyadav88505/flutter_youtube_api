@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
-import 'package:flutter_youtube_api/models/channel_model.dart';
-import 'package:flutter_youtube_api/models/video_model.dart';
-import 'package:flutter_youtube_api/utilities/keys.dart';
+import 'package:googlee_404/models/channel_model.dart';
+import 'package:googlee_404/models/video_model.dart';
+import 'package:googlee_404/utilities/keys.dart';
 
 class APIService {
   APIService._instantiate();
@@ -81,5 +81,4 @@ class APIService {
       throw json.decode(response.body)['error']['message'];
     }
   }
-
 }
